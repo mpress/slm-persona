@@ -11,7 +11,7 @@ module.exports = {
         app.use(express.json())
         app.use(express.urlencoded())
         
-        persona(app, opts);
+        persona(app, config);
         return app;
     }
 }
