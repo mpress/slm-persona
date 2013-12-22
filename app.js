@@ -10,7 +10,6 @@ module.exports = {
         // these could be wrapped in to the main app will have to test
         app.use(express.json())
         app.use(express.urlencoded())
-        app.use(express.cookieParser())
         
         persona(app, opts);
         return app;
