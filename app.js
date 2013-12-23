@@ -1,11 +1,23 @@
 var express = require('express');
 var persona = require('express-persona');
+var _ = require("underscore");
 
 module.exports = {
-    "title": "Accounts",
-    "name": "accounts",
+    "title": "Authentication",
+    "name": "authentication",
+    "routes": [
+        {
+            path: "/logout",
+            name: "Logout"
+        }
+    ],
     "app": function (config) {
         var app = express();
+        
+        _.extend(config, {
+            verifyPath: "/verify",
+            logoutPath: "/logout"
+        });
         
         // these could be wrapped in to the main app will have to test
         app.use(express.json())
