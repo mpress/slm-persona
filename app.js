@@ -7,8 +7,8 @@ module.exports = {
     "name": "authentication",
     "routes": [
         {
-            path: "/logout",
-            name: "Logout"
+            name: "Logout",
+            click: "navigator.id.logout()"
         }
     ],
     "app": function (config) {
